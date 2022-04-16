@@ -1,0 +1,58 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta http-equiv="X-UA-Compatible" content="IE=edge" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>Clock Spinner</title>
+    <style>
+      * {
+        margin: 0;
+        padding: 0;
+        background-color: rgb(8, 88, 88);
+      }
+
+      .circle {
+        height: 350px;
+        width: 350px;
+        border: 20px solid crimson;
+        margin: auto;
+        top: 200px;
+        bottom: 0;
+        right: 0;
+        left: 0;
+        border-radius: 50%;
+        position: relative;
+      }
+
+      .spin {
+        position: relative;
+        height: 120px;
+        background: crimson;
+        border-radius: 10px 10px;
+        width: 0px;
+        border: 10px solid crimson;
+        margin: auto;
+        top: 25px;
+        bottom: 0;
+        right: 0;
+        left: 0;
+        animation: clock 2s linear infinite;
+        transform-origin: top;
+      }
+
+      @keyframes clock {
+        from {
+          transform: rotateZ(0deg);
+        }
+        to {
+          transform: rotateZ(360deg);
+        }
+      }
+    </style>
+  </head>
+  <body>
+    <div class="circle"></div>
+    <div class="spin"></div>
+  </body>
+</html>
